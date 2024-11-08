@@ -50,30 +50,34 @@ SERP_API_KEY=your_serpapi_key
 pip install -r requirements.txt
 ```
 #### Running the Application Locally
+
+1.**Run Streamlit:**
 ```bash
-Run Streamlit:
 streamlit run app4.py
-Access the app in your browser at http://localhost:8501.
 ```
+2.**Access the app in your browser at http://localhost:8501.**
+
+
 **Docker Setup**
 
-    Build the Docker Image:
-
+Build the Docker Image:
+```bash
 docker build -t my-streamlit-chatbot .
+```
 
 **Run the Docker Container:**
+```bash
+docker run -p 8501:8501 --env-file .env my-streamlit-chatbot
+```
+Open your browser to http://localhost:8501 to interact with the bot.
 
-    docker run -p 8501:8501 --env-file .env my-streamlit-chatbot
-
-    Open your browser to http://localhost:8501 to interact with the bot.
-
-**Usage**
+#### Usage
 
     Click on "New question" to start a new conversation.
     Enter your question in the dialog box and press "Submit".
     The bot will respond based on both previous conversation history and web search results if relevant information is found online.
 
-**Example Workflow**
+#### Example Workflow
 
     User: What is the capital of France?
     Bot: The capital of France is Paris.
